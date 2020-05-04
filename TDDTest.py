@@ -123,9 +123,9 @@ class TestTennis(unittest.TestCase):
     #     self._create_gem_score(2, 0)
     #     self.assertEqual("2-0", self.game.score)
 
-    # def test_score_P2_won_gem_fource_P1_once(self):
-    #     self._create_gem_score(2, 4)
-    #     self.assertEqual("2-4", self.game.score)
+    # def test_score_P2_won_gem_twice(self):
+    #     self._create_gem_score(0, 2)
+    #     self.assertEqual("0-2", self.game.score)
 
     def test_score_P2_won_gem_fource_P1_once(self):
         self._create_gem_score(1, 4)
