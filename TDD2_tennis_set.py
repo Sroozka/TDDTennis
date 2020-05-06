@@ -20,3 +20,8 @@ class TennisSet:
 
     def add_points(self, p1_score, p2_score):
         pass
+
+    def gem_P1_P2_scored(self, punkty):
+        for _ in range(punkty):
+            self.gem.p1_scored_ball()
+            self.gem.p2_scored_ball()
