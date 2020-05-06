@@ -9,8 +9,10 @@ class TennisSet:
         self.set_winner = " "
         self.set_ended = False
 
-    def begin_gem(self):
+    def begin_gem(self, p1_score, p2_score):
         if self.list_of_gems == [] or self.is_gem_running():  # is True
+            self.win_gem(p1_score, p2_score)
+        else:
             pass
 
     def is_gem_running(self):
@@ -26,6 +28,7 @@ class TennisSet:
             for _ in range(p1_score, p2_score):  # range(2,4) = 2
                 self.gem.p2_scored_ball()
             self.list_of_gems.append(self.gem.Gem_ended)
+            self.list_of_gem_scores.append(self.gem.gem_result())
 
         else:  # 5:3
             if p2_score != 0:  # x3
@@ -33,6 +36,7 @@ class TennisSet:
             for _ in range(p2_score, p1_score):  # range(3,5) = 2
                 self.gem.p1_scored_ball()
             self.list_of_gems.append(self.gem.Gem_ended)
+            self.list_of_gem_scores.append(self.gem.gem_result())
 
     def gem_P1_P2_scored(self, punkty):
         for _ in range(punkty):
