@@ -7,6 +7,7 @@ class TennisGem:
         self._p2_score = 0
         self._p1_gem_point = 0
         self._p2_gem_point = 0
+        # self._score = "0-0"
 
     @property
     def score(self):

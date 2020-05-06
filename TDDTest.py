@@ -24,16 +24,22 @@ class TestTennis(unittest.TestCase):
 
     def _create_gem_score(self, player_one_scored, player_two_scored):
         for _ in range(player_one_scored):
-            self.game._create_gem(4, 2)
+            self.game._create_gem(5, 3)
             print(
                 f" _create_gem_scoreP1 P1: {self.game._p1_gem_point}, P2: {self.game._p2_gem_point}, score {self.game.score}")
         print("Test petla 1,2")
         for _ in range(player_two_scored):
             print("test")
-            self.game._create_gem(2, 4)
+            self.game._create_gem(3, 5)
             print(
                 f" _create_gem_scoreP2 P1: {self.game._p1_gem_point}, P2: {self.game._p2_gem_point}, score {self.game.score}")
         print(f"funkcja _create_gem_score {self.game.score}")
+
+    # def create_gem_score2(self, P1_score, P2_score):
+    #     for _ in range(P1_score):
+    #         self._create_bp_score(4, 0)
+    #     for _ in range(P2_score):
+    #         self._create_bp_score(0, 4)
 
     def test_something(self):
         initial_score = self.gem.score
@@ -128,5 +134,9 @@ class TestTennis(unittest.TestCase):
     #     self.assertEqual("0-2", self.game.score)
 
     def test_score_P2_won_gem_fource_P1_once(self):
-        self._create_gem_score(1, 4)
-        self.assertEqual("1-4", self.game.score)
+        # self.game._create_gem(5, 3)
+        # self.game._create_gem(5, 3)
+        # self.game._create_gem(3, 5)
+        # self.game._create_gem(3, 5)
+        self._create_gem_score(2, 2)
+        self.assertEqual("2-2", self.game.score)
