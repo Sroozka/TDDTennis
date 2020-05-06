@@ -4,6 +4,7 @@ class TennisGem:
     def __init__(self):
         self.P1_ball_score = 0
         self.P2_ball_score = 0
+        self.Who_is_leading = " "
         self.Gem_ended = False
 
     def gem_result(self):
@@ -15,6 +16,7 @@ class TennisGem:
         else:
             self.P1_ball_score += 1
         self.current_score()
+        self.leading_player()
 
     def p2_scored_ball(self):
         if 4 == self.P1_ball_score and self.P2_ball_score == 3:
@@ -22,6 +24,13 @@ class TennisGem:
         else:
             self.P2_ball_score += 1
         self.current_score()
+        self.leading_player()
 
     def current_score(self):
         print(f"{TennisGem.listOfNames[self.P1_ball_score]}-{TennisGem.listOfNames[self.P1_ball_score]}")
+
+    def leading_player(self):
+        if self.P2_ball_score > self.P1_ball_score:
+            self.Who_is_leading = "P2"
+        else:
+            self.Who_is_leading = "P1"
