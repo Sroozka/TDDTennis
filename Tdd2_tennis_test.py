@@ -25,6 +25,9 @@ class TennisTest2(unittest.TestCase):
         gem_score = self.gem.gem_result()
         self.assertEqual("15-30", gem_score)
 
-    def test2_P1_P2_15_40_set(self):
-        self.set.win_gem(1, 3)
-        self.assertEqual("15-40", self.set.list_of_gem_scores[0])
+    # def test2_P1_P2_15_40_set(self):
+    #     self.set.win_gem(1, 3)
+    #     self.assertEqual("15-40", self.set.list_of_gem_scores[0])
+
+
+
