@@ -6,6 +6,7 @@ class TennisSet:
         self.gem = TennisGem()
         self.list_of_gems = []
         self.list_of_gem_scores = []
+        self.list_of_gem_winners = []
         self.set_winner = " "
         self.set_ended = False
         self.p1_set_score = 0
@@ -31,6 +32,7 @@ class TennisSet:
                 self.gem.p2_scored_ball()
             self.list_of_gems.append(self.gem.Gem_ended)
             self.list_of_gem_scores.append(self.gem.gem_result())
+            self.list_of_gem_winners.append(self.gem.Who_is_leading)
 
         else:  # 5:3
             if p2_score != 0:  # x3
@@ -39,6 +41,7 @@ class TennisSet:
                 self.gem.p1_scored_ball()
             self.list_of_gems.append(self.gem.Gem_ended)
             self.list_of_gem_scores.append(self.gem.gem_result())
+            self.list_of_gem_winners.append(self.gem.Who_is_leading)
 
     def gem_P1_P2_scored(self, punkty):
         for _ in range(punkty):
