@@ -8,12 +8,14 @@ class TennisSet:
         self.list_of_gem_scores = []
         self.set_winner = " "
         self.set_ended = False
+        self.p1_set_score = 0
+        self.p2_set_score = 0
 
     def begin_gem(self, p1_score, p2_score):
         if self.list_of_gems == [] or self.is_gem_running():  # is True
             self.win_gem(p1_score, p2_score)
         else:
-            pass
+            pass  # dodać co robić, jak wywołujemy nowy gem, a gem nadal trwa
 
     def is_gem_running(self):
         if self.list_of_gems[-1]:  # is True
