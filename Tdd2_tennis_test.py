@@ -11,17 +11,17 @@ class TennisTest2(unittest.TestCase):
 
     def test1_start(self):
         self.gem = TennisGem(0, 0)
-        self.gem.win_gem()
+        self.gem.win()
         self.assertEqual("0-0", self.gem.gem_result())
 
     def test2_P1_15_0(self):
         self.gem = TennisGem(1, 0)
-        self.gem.win_gem()
+        self.gem.win()
         self.assertEqual("15-0", self.gem.gem_result())
 
     def test2_P2_15_30(self):
         self.gem = TennisGem(1, 2)
-        self.gem.win_gem()
+        self.gem.win()
         self.assertEqual("15-30", self.gem.gem_result())
 
     # def test2_P1_P2_15_40_set(self):
