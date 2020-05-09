@@ -41,15 +41,15 @@ class TennisSet():
             self.p2_win_gem()
 
     def p1_win_gem(self):
-        self.gem = TennisGem(4, 2)
-        self.gem.win()
+        # self.gem = TennisGem(4, 2)
+        # self.gem.win()
         self.p1_gem_score += 1
         self.list_of_gem_winners.append("P1")
         self.update_curent_score()
 
     def p2_win_gem(self):
-        self.gem = TennisGem(2, 4)
-        self.gem.win()
+        # self.gem = TennisGem(2, 4)
+        # self.gem.win()
         self.p2_gem_score += 1
         self.list_of_gem_winners.append("P2")
         self.update_curent_score()
