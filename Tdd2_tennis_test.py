@@ -27,7 +27,7 @@ class TennisTest2(unittest.TestCase):
     def test2_P1_P2_set_4_2(self):
         self.set = TennisSet(4, 2)
         self.set.win()
-        print(f"{self.set.list_of_set_score}")
+        print(f"{self.set.set_score}")
 
 
 
