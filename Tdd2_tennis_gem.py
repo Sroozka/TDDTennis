@@ -1,7 +1,4 @@
-from Tdd2_tennis_set import Game
-
-
-class TennisGem(Game)
+class TennisGem():
     listOfNames = ("0", "15", "30", "40", "Advantage", "Gem")
 
     def __init__(self, p1_score=0, p2_score=0):
@@ -32,13 +29,12 @@ class TennisGem(Game)
             self.p1_scored_ball()
             self.p2_scored_ball()
 
-
     def p1_scored_ball(self):
         if 4 == self.P2_ball_score and self.P1_ball_score == 3:
             self.P2_ball_score -= 1
         else:
             self.P1_ball_score += 1
-        self.current_score()
+        # self.current_score()
         self.leading_player()
         self.gem_end()
 
@@ -47,7 +43,7 @@ class TennisGem(Game)
             self.P1_ball_score -= 1
         else:
             self.P2_ball_score += 1
-        self.current_score()
+        # self.current_score()
         self.leading_player()
         self.gem_end()
 
