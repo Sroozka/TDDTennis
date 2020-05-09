@@ -24,9 +24,10 @@ class TennisTest2(unittest.TestCase):
         self.gem.win()
         self.assertEqual("15-30", self.gem.gem_result())
 
-    # def test2_P1_P2_15_40_set(self):
-    #     self.set.win_gem(1, 3)
-    #     self.assertEqual("15-40", self.set.list_of_gem_scores[0])
+    def test2_P1_P2_set_4_2(self):
+        self.set = TennisSet(4, 2)
+        self.set.win()
+        print(f"{self.set.list_of_set_score}")
 
 
 
